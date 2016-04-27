@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.io.*;
+public class Archivo2{
+	public static void contenido(String Postales) throws FileNotFoundException,IOException{
+		FileReader p=new FileReader(Postales);
+		BufferedReader b=new BufferedReader(p);
+		System.out.println("Ingrese el codigo postal que desea ingresar(5 digitos):\n");
+		Scanner red=new Scanner(System.in);
+		int r=red.nextInt();
+		String codigo="";
+		while((codigo=b.readLine())!=null)
+		{
+			System.out.println(codigo);
+		}
+		b.close();
+
+	}
+	public static void main(String[] args) throws IOException {
+		contenido("Postales.txt");
+	}
+}
