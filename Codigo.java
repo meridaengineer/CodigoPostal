@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.io.*;
-public class Archivo{
+public class Codigo{
 	public static void contenido(String Postales) throws FileNotFoundException,IOException {
 		FileReader p=new FileReader(Postales);
 		BufferedReader b=new BufferedReader(p);
@@ -16,7 +16,7 @@ public class Archivo{
 
         
         
-        if(cad.length()>5){
+        if(cad.length()!=5){
         	System.out.println("no es valido este codigo postal");
         }
         else{
@@ -31,7 +31,7 @@ public class Archivo{
      				StringTokenizer st=new StringTokenizer(codigo,"|");
      				System.out.println("--------------------------------------------------------------------------------");
      				System.out.println("Codigo:\t"+st.nextElement().toString()+"\tasentamiento:\t"+st.nextElement().toString());
-     				System.out.println("\ntipo de asentamiento:\t"+st.nextElement().toString()+"\tmunicipio:\t"+st.nextElement().toString());
+     				System.out.println("\ntipo de asentamiento:\t"+st.nextElement().toString()+"\t\tmunicipio:\t"+st.nextElement().toString());
      				System.out.println("\nEstado:\t"+st.nextElement().toString()+"\td_ciudad:\t"+st.nextElement().toString());
      				System.out.println("\nd_cp:\t"+st.nextElement().toString()+"\tc_Estado:\t"+st.nextElement().toString());
      				System.out.println("\nc_oficina:\t"+st.nextElement().toString()+"\tc_tipo_asentamiento:\t"+st.nextElement().toString());
